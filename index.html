@@ -11,10 +11,10 @@
     .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
     .section-title { font-size: 20px; margin-bottom: 20px; color: #a1a1aa; border-left: 4px solid #ff3e3e; padding-left: 10px; }
     
-    /* Grid ve Esneklik Ayarı */
+    /* Yan yana dizilmeyi sağlayan Flex yapısı */
     .movie-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: flex-start; }
     
-    /* Kartların Boyutunu Sabitleyen Yeni Ayar */
+    /* Kartların boyutunu dikeyde sabitleyen ayar */
     .movie-card { background-color: #141417; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 1px solid #1f1f24; text-decoration: none; color: inherit; display: block; max-width: 220px; width: 100%; }
     .movie-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 62, 62, 0.1); border-color: #ff3e3e; }
     .movie-info { padding: 15px; }
@@ -26,18 +26,18 @@
 
   <header>
     <h1>SİNEMANGA TV</h1>
-    <span style="color: #a1a1aa; font-size: 14px; letter-spacing: 1px;">FİLM & ANİME</span>
   </header>
 
   <div class="container">
-    <h2 class="section-title">Son Eklenenler</h2>
+    <h2 class="section-title">Öne Çıkan Anime Filmleri</h2>
     
+    <!-- Tüm filmleri yan yana tutan ana kutu -->
     <div class="movie-grid">
 
       <!-- ==================== 1. FİLM: DEMON SLAYER ==================== -->
       <a href="demon-slayer-mugen-train.html" class="movie-card">
         <div style="width: 100%; height: 280px; overflow: hidden;">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8-m-re8njONXq5qXR-IOgXhHcd_jflqu9BJQkOOEmrs5XPdKiYk0mo5zaKfjo-Io7Y_dIMUQST-QRAR5KRNituVFEt6ydrUJf6eYBAo_D58A5cRa3oroogs9t0kjyZvBPIRgLpkrdmYlOnYFInQod71i47eb3vX4L6i9VH6Vsp6M0ILJUU_fBuN9B9gm4/s1052/MV5BYmEwNjIyNDItNjVjOS00NjM5LWJlOGUtODI4YWFlZmQ0MjJmXkEyXkFqcGc@._V1_.jpg" alt="Demon Slayer: Mugen Train" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://i.hizliresim.com/b4jsdka.jpeg" alt="Demon Slayer" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="movie-info">
           <h3 class="movie-title">Demon Slayer: Mugen Train</h3>
@@ -45,11 +45,10 @@
         </div>
       </a>
 
-      <!-- ==================== 2. FİLM: JUJUTSU KAISEN 0 ==================== -->
+      <!-- ==================== 2. FİLM: JUJUTSU KAISEN ==================== -->
       <a href="jujutsu-kaisen-0.html" class="movie-card">
         <div style="width: 100%; height: 280px; overflow: hidden;">
-          <!-- Yeni gönderdiğin Hızlıresim afiş linkini buraya çaktım -->
-          <img src="https://i.hizliresim.com/a1dku8u.jpeg" alt="Jujutsu Kaisen 0" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://i.hizliresim.com/62atb88.jpeg" alt="Jujutsu Kaisen 0" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="movie-info">
           <h3 class="movie-title">Jujutsu Kaisen 0</h3>
@@ -57,18 +56,10 @@
         </div>
       </a>
 
-    </div>
-  </div>
-
-</body>
-</html>
-
-
-<!-- ==================== 3. FİLM: KIMI NO NA WA ==================== -->
+      <!-- ==================== 3. FİLM: KIMI NO NA WA ==================== -->
       <a href="kimi-no-na-wa.html" class="movie-card">
         <div style="width: 100%; height: 280px; overflow: hidden;">
-          <!-- Attığın o orijinal Blogger afiş linkini jilet gibi buraya gömdüm -->
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLBuGUB-jdMWsOSEGLP4gGiiy-I4mBWisWcIlq6DozV076ZyV5HqPo4o5H9dCvHTXbiVvylqe4i209EwJsyl1sEgo4ku8qLUfsgiIssu0BAbBz9PoioqzXI5h4aZOM8gJs_9yu49nKjh0qQwIteVSFuEoWbVHLYr-Enp4Z2KH1UBfaT2mRlZSqp6oJu7mJ/s673/images%20%281%29.jpeg" alt="Kimi no Na wa" style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="https://i.hizliresim.com/b4jsdka.jpeg" alt="Kimi no Na wa" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
         <div class="movie-info">
           <h3 class="movie-title">Kimi no Na wa (Your Name)</h3>
@@ -76,14 +67,7 @@
         </div>
       </a>
 
-    </div>
-  </div>
-
-</body>
-</html>
-
-
-<!-- ==================== 4. FİLM: WEATHERING WITH YOU ==================== -->
+      <!-- ==================== 4. FİLM: WEATHERING WITH YOU ==================== -->
       <a href="weathering-with-you.html" class="movie-card">
         <div style="width: 100%; height: 280px; overflow: hidden;">
           <img src="https://i.hizliresim.com/tkpejat.jpeg" alt="Weathering With You" style="width: 100%; height: 100%; object-fit: cover;">
@@ -94,9 +78,8 @@
         </div>
       </a>
 
-
-
-<a href="suzume.html" class="movie-card">
+      <!-- ==================== 5. FİLM: SUZUME ==================== -->
+      <a href="suzume.html" class="movie-card">
         <div style="width: 100%; height: 280px; overflow: hidden;">
           <img src="https://i.hizliresim.com/cahlopw.jpeg" alt="Suzume" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
@@ -106,8 +89,8 @@
         </div>
       </a>
 
-
-<a href="a-silent-voice.html" class="movie-card">
+      <!-- ==================== 6. FİLM: A SILENT VOICE ==================== -->
+      <a href="a-silent-voice.html" class="movie-card">
         <div style="width: 100%; height: 280px; overflow: hidden;">
           <img src="https://i.hizliresim.com/kk5e5ux.jpeg" alt="A Silent Voice" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
@@ -116,3 +99,9 @@
           <div class="movie-meta">Full HD • Türkçe Altyazılı</div>
         </div>
       </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
