@@ -8,25 +8,20 @@
     body { background-color: #0c0c0e; color: #ffffff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
     header { background-color: #141417; padding: 15px 40px; border-bottom: 2px solid #1f1f24; }
     header a { color: #ff3e3e; text-decoration: none; font-size: 20px; font-weight: 800; }
-    .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+    .container { max-width: 800px; margin: 30px auto; padding: 0 20px; }
     
+    /* Oynatıcı Kutusu */
     .player-container {
-      background-color: #141417;
-      background-image: url('https://i.hizliresim.com/7ymv2he.jpg'); /* Hızlıresim linkini buraya gömdük */
-      background-size: cover;
-      background-position: center;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #1f1f24;
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
+      position: relative; 
+      width: 100%; 
+      margin: 0 auto; 
+      border-radius: 8px; 
+      overflow: hidden; 
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+      background: #000;
     }
-    .player-container iframe {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 6px;
-    }
+    video { display: block; width: 100%; height: auto; max-height: 450px; }
+    
     .movie-details { margin-top: 25px; background-color: #141417; padding: 20px; border-radius: 8px; border: 1px solid #1f1f24; }
     .movie-title { font-size: 28px; margin: 0 0 10px 0; }
   </style>
@@ -39,16 +34,33 @@
 
   <div class="container">
     
+    <!-- Senin Gönderdin HLS Video Oynatıcı Alanı -->
     <div class="player-container">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <video id="video" controls preload="auto"></video>
     </div>
 
     <div class="movie-details">
       <h2 class="movie-title">Demon Slayer: Mugen Train</h2>
-      <p style="color: #a1a1aa; line-height: 1.6;">İyi seyirler dileriz! Filmi izledikten sonra yorum yapmayı unutmayın.</p>
+      <p style="color: #a1a1aa; line-height: 1.6;">İyi seyirler dileriz! Full HD ve Türkçe Altyazılı tam ekran izleyebilirsiniz.</p>
     </div>
 
   </div>
+
+  <!-- HLS Akış Kütüphanesi -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    var video = document.getElementById('video');
+    var videoSrc = 'https://p3.photostack.net/v/zbxuzwfah22n/master.m3u8';
+
+    if (Hls.isSupported()) {
+      var hls = new Hls();
+      hls.loadSource(videoSrc);
+      hls.attachMedia(video);
+    }
+    else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = videoSrc;
+    }
+  </script>
 
 </body>
 </html>
