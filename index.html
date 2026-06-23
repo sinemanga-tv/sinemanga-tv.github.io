@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akira İzle | Sinemanga TV</title>
+  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #0c0c0e;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #141417;
+      padding: 15px 40px;
+      border-bottom: 2px solid #1f1f24;
+    }
+    header a {
+      color: #ff3e3e;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .player-container {
+      background-color: #141417;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #1f1f24;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    /* Oyuncuyu Duyarlı (Responsive) Yapma */
+    .video-js {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9;
+      border-radius: 6px;
+    }
+    .movie-details {
+      margin-top: 25px;
+    }
+    .movie-title {
+      font-size: 28px;
+      margin: 0 0 10px 0;
+      color: #ffffff;
+    }
+    .movie-plot {
+      color: #a1a1aa;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    .ad-box {
+      background-color: #141417;
+      width: 100%;
+      height: 90px;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px dashed #3f3f46;
+      color: #71717a;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">← SİNEMANGA TV</a>
+  </header>
+
+  <div class="container">
+    
+    <div class="player-container">
+      <video
+        id="my-video"
+        class="video-js vjs-default-skin vjs-big-play-centered"
+        controls
+        preload="auto"
+        data-setup="{}">
+        <source src="BURAYA_KURTARDIGIN_M3U8_LINKINI_YAPISTIR" type="application/x-mpegURL">
+        <p class="vjs-no-js">
+          Video oynatmak için JavaScript desteği gerekiyor.
+        </p>
+      </video>
+    </div>
+
+    <div class="movie-details">
+      <h2 class="movie-title">Akira (1988)</h2>
+      <p class="movie-plot">
+        Medyum güçleri olan genç bir adamın askeri bir projede piyon olarak kullanılmasını ve distopik Neo-Tokyo sokaklarındaki motorcu çetelerinin mücadelesini konu alan siberpunk efsanesi.
+      </p>
+    </div>
+
+    <div class="ad-box">
+      Sponsorlu Bağlantı / Reklam Alanı
+    </div>
+
+  </div>
+
+  <script src="https://vjs.zencdn.net/7.20.3/video.js"></script>
+</body>
+</html>
