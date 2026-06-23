@@ -29,8 +29,12 @@
       margin: 30px auto;
       padding: 0 20px;
     }
+    /* Video Oynatıcı Alanı ve Afiş Kaplama Arka Planı */
     .player-container {
       background-color: #141417;
+      background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRUgL1rPv_B9SggD6JuV_Lvx0vj15W-Z_zek7nKj6WyyT6a9G5I8MuUlH9wGfKqg_mG35pE90wF-E-5M_R08m8DqFCHi_GZ_G8u7wUj6E1_W5vXy7v_C7v_S7v/');
+      background-size: cover;
+      background-position: center;
       padding: 10px;
       border-radius: 8px;
       border: 1px solid #1f1f24;
@@ -39,6 +43,7 @@
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
+      margin-bottom: 25px;
     }
     .player-container iframe {
       position: absolute;
@@ -48,9 +53,14 @@
       height: 100%;
       border: 0;
       border-radius: 6px;
+      background: transparent;
     }
     .movie-details {
       margin-top: 25px;
+      background-color: #141417;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #1f1f24;
     }
     .movie-title {
       font-size: 28px;
@@ -61,6 +71,7 @@
       color: #a1a1aa;
       line-height: 1.6;
       font-size: 15px;
+      margin: 0;
     }
     .ad-box {
       background-color: #141417;
@@ -85,7 +96,6 @@
 
   <div class="container">
     
-    <!-- Google Drive Video Oynatıcısı -->
     <div class="player-container">
       <iframe src="https://drive.google.com/file/d/1IWGmCupGmGgDfXegEfsTlIoZOMgPRW9H/preview" allow="autoplay" allowfullscreen></iframe>
     </div>
