@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akira İzle | Sinemanga TV</title>
-  <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+  <title>Sinemanga TV | Film & Anime Platformu</title>
   <style>
+    /* Modern, Karanlık Sinema Teması */
     body {
       background-color: #0c0c0e;
       color: #ffffff;
@@ -13,55 +13,32 @@
       margin: 0;
       padding: 0;
     }
+
+    /* Üst Menü (Navbar) */
     header {
       background-color: #141417;
-      padding: 15px 40px;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       border-bottom: 2px solid #1f1f24;
     }
-    header a {
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
       color: #ff3e3e;
-      text-decoration: none;
-      font-size: 20px;
+      letter-spacing: 2px;
       font-weight: 800;
-      letter-spacing: 1px;
     }
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    .player-container {
-      background-color: #141417;
-      padding: 10px;
-      border-radius: 8px;
-      border: 1px solid #1f1f24;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    }
-    /* Oyuncuyu Duyarlı (Responsive) Yapma */
-    .video-js {
-      width: 100% !important;
-      height: auto !important;
-      aspect-ratio: 16 / 9;
-      border-radius: 6px;
-    }
-    .movie-details {
-      margin-top: 25px;
-    }
-    .movie-title {
-      font-size: 28px;
-      margin: 0 0 10px 0;
-      color: #ffffff;
-    }
-    .movie-plot {
-      color: #a1a1aa;
-      line-height: 1.6;
-      font-size: 15px;
-    }
-    .ad-box {
+
+    /* Şık Reklam Alanı */
+    .ad-banner {
       background-color: #141417;
       width: 100%;
+      max-width: 728px;
       height: 90px;
-      margin-top: 30px;
+      margin: 20px auto;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -70,43 +47,114 @@
       font-size: 14px;
       border-radius: 4px;
     }
+
+    /* İçerik Alanı */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #a1a1aa;
+      border-left: 4px solid #ff3e3e;
+      padding-left: 10px;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    /* Film & Anime Kartları */
+    .movie-card {
+      background-color: #141417;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border: 1px solid #1f1f24;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 62, 62, 0.1);
+      border-color: #ff3e3e;
+    }
+
+    .movie-poster {
+      width: 100%;
+      height: 280px;
+      background-color: #27272a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #71717a;
+      font-size: 14px;
+    }
+
+    .movie-info {
+      padding: 15px;
+    }
+
+    .movie-title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .movie-meta {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #a1a1aa;
+    }
   </style>
 </head>
 <body>
 
+  <!-- Üst Menü -->
   <header>
-    <a href="index.html">← SİNEMANGA TV</a>
+    <h1>SİNEMANGA TV</h1>
+    <span style="color: #a1a1aa; font-size: 14px; letter-spacing: 1px;">FİLM & ANİME</span>
   </header>
 
   <div class="container">
     
-    <div class="player-container">
-      <video
-        id="my-video"
-        class="video-js vjs-default-skin vjs-big-play-centered"
-        controls
-        preload="auto"
-        data-setup="{}">
-        <source src="BURAYA_KURTARDIGIN_M3U8_LINKINI_YAPISTIR" type="application/x-mpegURL">
-        <p class="vjs-no-js">
-          Video oynatmak için JavaScript desteği gerekiyor.
-        </p>
-      </video>
-    </div>
-
-    <div class="movie-details">
-      <h2 class="movie-title">Akira (1988)</h2>
-      <p class="movie-plot">
-        Medyum güçleri olan genç bir adamın askeri bir projede piyon olarak kullanılmasını ve distopik Neo-Tokyo sokaklarındaki motorcu çetelerinin mücadelesini konu alan siberpunk efsanesi.
-      </p>
-    </div>
-
-    <div class="ad-box">
+    <!-- Üst Reklam Alanı -->
+    <div class="ad-banner">
       Sponsorlu Bağlantı / Reklam Alanı
     </div>
 
+    <h2 class="section-title">Son Eklenenler</h2>
+    
+    <!-- İçerik Izgarası -->
+    <div class="movie-grid">
+      
+      <!-- Kuzeyin Yükselen Yıldızı Kartı -->
+      <a href="kuzeyin-yukselen-yildizi.html" class="movie-card">
+        <div class="movie-poster">
+          <!-- İleride afiş resmini buraya koyacağız -->
+          [ FİLM AFİŞİ ]
+        </div>
+        <div class="movie-info">
+          <h3 class="movie-title">Kuzeyin Yükselen Yıldızı</h3>
+          <div class="movie-meta">Full HD • Türkçe Dublaj</div>
+        </div>
+      </a>
+
+      <!-- Yeni eklenecek filmleri gelecekte tam bu satırın altına yeni kartlar açarak ekleyebilirsin -->
+
+    </div>
   </div>
 
-  <script src="https://vjs.zencdn.net/7.20.3/video.js"></script>
 </body>
 </html>
