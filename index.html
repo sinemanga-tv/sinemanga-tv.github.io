@@ -10,8 +10,12 @@
     header h1 { margin: 0; font-size: 24px; color: #ff3e3e; letter-spacing: 2px; font-weight: 800; }
     .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
     .section-title { font-size: 20px; margin-bottom: 20px; color: #a1a1aa; border-left: 4px solid #ff3e3e; padding-left: 10px; }
-    .movie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px; }
-    .movie-card { background-color: #141417; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 1px solid #1f1f24; text-decoration: none; color: inherit; display: block; }
+    
+    /* Grid ve Esneklik Ayarı */
+    .movie-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: flex-start; }
+    
+    /* Kartların Boyutunu Sabitleyen Yeni Ayar */
+    .movie-card { background-color: #141417; border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; border: 1px solid #1f1f24; text-decoration: none; color: inherit; display: block; max-width: 220px; width: 100%; }
     .movie-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(255, 62, 62, 0.1); border-color: #ff3e3e; }
     .movie-info { padding: 15px; }
     .movie-title { margin: 0; font-size: 16px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
